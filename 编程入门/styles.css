@@ -1,0 +1,369 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0; /* 淡灰色背景 */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: linear-gradient(to right, #ff8c00, #ffa500); /* 橙色渐变 */
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* 统一超链接样式 */
+a {
+    color: #007bff; /* 蓝色 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+a:hover {
+    color: #0056b3; /* 深蓝色 */
+}
+
+a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #007bff; /* 蓝色 */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* 主页链接 */
+.home-link {
+    color: #333; /* 深灰色 */
+}
+
+.home-link:hover {
+    color: #555; /* 更深的灰色 */
+}
+
+/* 课程、博客、联系我们、登录链接 */
+.nav-link {
+    color: #333; /* 深灰色 */
+}
+
+.nav-link:hover {
+    color: #555; /* 更深的灰色 */
+}
+
+.hero {
+    background: linear-gradient(to right, #ff6b6b, #ffb366); /* 粉红-橙色渐变 */
+    color: #333;
+    padding: 6rem 0;
+    text-align: center;
+    margin-top: 6rem;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    background: #343a40; /* 深灰色 */
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    display: inline-block;
+    transition: background 0.3s ease;
+    border-radius: 0.25rem;
+}
+
+.hero .btn:hover {
+    background: #555; /* 更深的灰色 */
+}
+
+.features {
+    background: #fff;
+    padding: 6rem 0;
+    text-align: center;
+    margin-top: 6rem;
+    animation: scaleIn 1s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.features .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features .feature-item {
+    width: 30%;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #f0f0f0; /* 淡灰色 */
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.features .feature-item:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.features .feature-item img {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.features .feature-item h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.features .feature-item p {
+    color: #777;
+    font-size: 1.1rem;
+}
+
+footer {
+    background: linear-gradient(to right, #007bff, #00bcd4); /* 蓝色-青色渐变 */
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 6rem;
+    animation: slideInUp 1s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+.course-list, .blog-list, .contact-form, .login-form {
+    padding: 6rem 0;
+}
+
+.course-list h1, .blog-list h1, .contact-form h1, .login-form h1 {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 3rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.course-item, .blog-item {
+    background: #fff;
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.course-item:hover, .blog-item:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.course-item h2, .blog-item h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.course-item p, .blog-item p {
+    color: #777;
+    font-size: 1.1rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form label {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.contact-form .btn {
+    background: #007bff; /* 深蓝色 */
+    color: #fff;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.contact-form .btn:hover {
+    background: #0056b3; /* 更深的蓝色 */
+}
+
+.contact-form a {
+    color: #6f42c1; /* 紫色 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-form a:hover {
+    color: #5a32a3; /* 深紫色 */
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form label {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.login-form input {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.login-form .btn {
+    background: #28a745; /* 绿色 */
+    color: #fff;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.login-form .btn:hover {
+    background: #218838; /* 更深的绿色 */
+}
+
+.login-form a {
+    color: #17a2b8; /* 青色 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-form a:hover {
+    color: #116e7e; /* 深青色 */
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #ff6b6b, #ffb366); /* 粉红-橙色渐变 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
